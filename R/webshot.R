@@ -245,7 +245,7 @@ webshot <- function(
     jsonlite::toJSON(optsList)
   )
 
-  res <- spawn_process(args)
+  res <- phantom_run(args)
 
   # Handle missing phantomjs
   if (is.null(res)) return(NULL)
