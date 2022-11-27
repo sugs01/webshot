@@ -245,7 +245,7 @@ webshot <- function(
     jsonlite::toJSON(optsList)
   )
 
-  res <- spawn_process('C:/Users/sugs0/AppData/Local/R/win-library/4.2/webshot/webshot.js', args)
+  res <- subprocess::spawn_process('C:/Users/sugs0/AppData/Local/R/win-library/4.2/webshot/webshot.js', args)
 
   # Handle missing phantomjs
   if (is.null(res)) return(NULL)
